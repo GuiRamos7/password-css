@@ -1,0 +1,142 @@
+body {
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #1f1f1f;
+    overflow-x: hidden;
+}
+.test{
+    position: absolute;
+    background-color: #370091;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    animation-play-state: paused;
+
+}
+
+.is-correct {
+    animation: bounceOutLeft 2s ease-in-out 0s 1 normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+
+}
+
+.wrong {
+    animation: tada 1s ease-in-out 0s 1 normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+
+@keyframes bounceOutLeft {
+    20% {
+      opacity: 1;
+      -webkit-transform: translate3d(20px, 0, 0);
+      transform: translate3d(20px, 0, 0);
+    }
+  
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(-2000px, 0, 0);
+      transform: translate3d(-2000px, 0, 0);
+    }
+  }
+
+@keyframes tada {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    10%,
+    20% {
+      -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+  
+    40%,
+    60%,
+    80% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+
+
+
+.correct{
+    position: absolute;
+    background: linear-gradient(to left, #43cea2, #185a9d);
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+
+.welcome{
+    width: 45%;
+    margin: 2.5em auto;
+    font-size: 5em;
+    color: #fff;
+}
+
+
+
+
+    .loginBox{
+        width: 20%;
+        height: 150px;
+        margin: 15% auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    label{
+        width: 100%;
+    }
+        .input-login{
+            font-style: italic;
+            font-family: 'Source Sans Pro', sans-serif;
+            width: 100%;
+            font-size: 1.4em;
+            padding: 10px 0;
+            border: none;
+            border-bottom: 2px #210055 solid
+        }
+
+        .btn-submit{
+            font-style: italic;
+            font-family: 'Source Sans Pro', sans-serif;
+            margin: 10px;
+            cursor: pointer;
+            color: #FFF;    
+            border: none;
+            width: 100%;
+            padding: 10px 0px;
+            font-size: 1.1em;
+            background-color: #210055;
+            text-transform: uppercase;
+            box-shadow: 0 3px 5px #160035;
+        }
+
+        .btn-submit:active{
+            box-shadow: 0 2px 0px #160035;
+        }
